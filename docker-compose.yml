@@ -8,3 +8,12 @@ services:
       - "60080:80"
     volumes:
       - ./:/app
+  db:
+    image: mysql:5.7.32
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_DATABASE: bbs
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+      MYSQL_RANDOM_ROOT_PASSWORD: 1
